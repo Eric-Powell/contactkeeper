@@ -10,15 +10,13 @@ const personSchema = new Schema({
   address1: {type: String, max: 200, lowercase: true, trim: true},
   address2: {type: String, max: 200, lowercase: true, trim: true},
   city: {type: String, max: 100, lowercase: true, trim: true},
-  State: [{type: Schema.ObjectId, ref: 'State'}],
+  state: {type: String, min: 2, max: 2, uppercase: true, trim: true},
   zip: {type: String, min: 5, max: 5, lowercase: true, trim: true},
   comments: [{date: Date, body: String}],
   friends: Array
 });
 
 module.exports = mongoose.model('Friend', personSchema);
-
-// create stateSchema next
 
 
 // Postman entry

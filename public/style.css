@@ -1,0 +1,17 @@
+.title {
+  font-size: 300%;
+  font-weight: bold;
+  color: navy;
+  margin-left: 1%;
+}
+
+.contacts {
+  margin-left: 1%;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.friend {
+	margin-bottom: 1%;
+  margin-left: 1%;
+}

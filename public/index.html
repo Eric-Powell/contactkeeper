@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html ng-app lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Contact Keeper</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/scripts/angular/angular.js"></script>
+    <!-- <script src="/app.js"></script> -->
+    <script src="/controllers/friendList.js"></script>
   </head>
-  <body>
+  <body ng-app="contactApp" >
   	<header class="title">
   		Contact Keeper
   	</header>
-  	
+
+    <p class="contacts">Contacts</p>
+    <div ng-controller="FriendList">
+      <div ng-repeat="friend in friends track by $index" class="friend">
+        {{friend.firstName + ' ' + friend.lastName}} <br>
+        {{friend.number}} <br>
+        {{friend.email}}
+      </div>
+  	</div>
+    
   </body>
 </html>
+
+

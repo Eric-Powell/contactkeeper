@@ -14,13 +14,9 @@
   	</header>
 
     <p class="contacts">Contacts</p>
-    <div ng-controller="FriendList">
-      <div ng-repeat="friend in friends track by $index" class="friend">
-        {{friend.firstName + ' ' + friend.lastName}} <br>
-        {{friend.number}} <br>
-        {{friend.email}}
-      </div>
-  	</div>
+
+    <friends></friends> 
+        
     
   </body>
 </html>

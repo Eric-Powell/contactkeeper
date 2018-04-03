@@ -43,28 +43,7 @@ app.controller('FriendList', function ($scope) {
 })
 
 
-
-
-
-// firstName: {type: String, required: true, max: 100, lowercase: true, trim: true},
-// lastName: {type: String, required: true, max: 100, lowercase: true, trim: true},
-// number: {type: String, required: true, max: 100, lowercase: true, trim: true},
-// email: {type: String, max: 100, lowercase: true, trim: true},
-// address1: {type: String, max: 200, lowercase: true, trim: true},
-// address2: {type: String, max: 200, lowercase: true, trim: true},
-// city: {type: String, max: 100, lowercase: true, trim: true},
-// state: {type: String, min: 2, max: 2, uppercase: true, trim: true},
-// zip: {type: String, min: 5, max: 5, lowercase: true, trim: true},
-// comments: [{date: Date, body: String}],
-// friends: Array
-
-
-
-
-
-
-
-// app.component('friendList', {
-// 	templateUrl: '../templates/friendList.html',
-//   // controller: FriendList
-// });
+app.component('friends', {
+	templateUrl: '../templates/friendList.html',
+  controller: 'FriendList'
+});

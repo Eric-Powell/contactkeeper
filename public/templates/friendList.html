@@ -1,4 +1,37 @@
-<div ng-repeat='friend in friends track by $index' class='friend'>
-	{{friend.firstName + ' ' + friend.lastName}}
+<!-- bootstrap setup -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div col-md-3>
+      <input type="text" name="addContact" placeholder="Name">
+    </div>
+
+    <div col-md-9>
+      <div class="contacts-container">
+        <h2 class="contacts">Contacts</h2>
+
+        <div class="search">
+          <input type="text" name="search" placeholder="Search">          
+        </div>
+
+        <ul class="friendList">
+          <li ng-repeat="friend in $ctrl.friends track by $index" class="friend">
+            <h4 ng-click="showDetails = !showDetails">{{friend.firstName + ' ' + friend.lastName}}</h4>
+            <div class="friend-details" ng-class="{'hidden': !showDetails}">
+              <p>{{friend.number}}</p>
+              <p>{{friend.email}}</p>
+              <p>{{friend.address1}}</p>
+              <p>{{friend.city}}</p>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      
+    </div>
+  </div>
 </div>
+
+
+
 

@@ -1,7 +1,7 @@
-let app = angular.module('contactApp', []);
+// let app = angular.module('contactApp', []);
 
 app.controller('FriendList', function ($scope) {
-  $scope.friends = [{
+  this.friends = [{
     firstName: 'John',
     lastName: 'Johnson',
     number: '703-534-7272',
@@ -39,6 +39,13 @@ app.controller('FriendList', function ($scope) {
     comments: [{date: '1/25/18', body: 'met Stacy at HH'}],
     friends: ['Kim Taylor']
   }];
+
+  // $scope.showMe = false;
+
+  // $scope.friendDetails = function(friend, $index) {
+  //   $scope.showMe = !$scope.showMe;
+  //   console.log($index, friend);
+  // };
   
 })
 

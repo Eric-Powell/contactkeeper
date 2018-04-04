@@ -2,16 +2,44 @@
   font-size: 300%;
   font-weight: bold;
   color: navy;
-  margin-left: 1%;
+  padding-left: 1%;
+}
+
+.contacts-container {
+  border: solid blue 4px;
+  border-radius: 10px;
 }
 
 .contacts {
-  margin-left: 1%;
-  font-size: 150%;
+  padding-left: 20px;
+  font-size: 200%;
   font-weight: bold;
 }
 
-.friend {
-	margin-bottom: .5%;
-  margin-left: 1%;
+.search {
+  padding-left: 20px;
+}
+
+ul.friendList {
+  padding: 1%;
+  margin: 0;
+}
+
+li.friend {
+  list-style: none;
+  border: solid 2px;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+	margin-bottom: 10px;
+  /*margin-left: 1%;*/
+}
+
+.friend-details {
+  max-height: 100%;
+  /*transition: 1s;*/
+  overflow: hidden;
+}
+
+.friend-details.hidden {
+  max-height: 0;
 }

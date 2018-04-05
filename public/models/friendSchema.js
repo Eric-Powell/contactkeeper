@@ -12,7 +12,7 @@ const personSchema = new Schema({
   city: {type: String, max: 100, lowercase: true, trim: true},
   state: {type: String, min: 2, max: 2, uppercase: true, trim: true},
   zip: {type: String, min: 5, max: 5, lowercase: true, trim: true},
-  comments: [{date: Date, body: String}],
+  notes: [{date: Date, body: String}],
   friends: Array
 });
 

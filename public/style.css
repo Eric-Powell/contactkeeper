@@ -20,6 +20,11 @@
   padding-left: 20px;
 }
 
+.sortBy {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
 ul.friendList {
   padding: 1%;
   margin: 0;

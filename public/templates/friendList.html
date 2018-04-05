@@ -2,26 +2,43 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div col-md-3>
+    <div class="col-md-5">
       <input type="text" name="addContact" placeholder="Name">
     </div>
 
-    <div col-md-9>
+    <div class="col-md-7">
       <div class="contacts-container">
         <h2 class="contacts">Contacts</h2>
 
         <div class="search">
-          <input type="text" name="search" placeholder="Search">          
+          <input type="text" name="search" placeholder="Search" ng-model="$ctrl.query">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </div>
 
+        <div class="sortBy">
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="firstName">First Name</option>
+          <option value="lastName">Last Name</option>
+        </select>
+      </div>
+
         <ul class="friendList">
-          <li ng-repeat="friend in $ctrl.friends track by $index" class="friend">
+          <li ng-repeat="friend in $ctrl.friends | filter: $ctrl.query | orderBy: $ctrl.orderProp track by $index" class="friend">
             <h4 ng-click="showDetails = !showDetails">{{friend.firstName + ' ' + friend.lastName}}</h4>
             <div class="friend-details" ng-class="{'hidden': !showDetails}">
               <p>{{friend.number}}</p>
               <p>{{friend.email}}</p>
-              <p>{{friend.address1}}</p>
-              <p>{{friend.city}}</p>
+              <p>{{friend.address1}} <br>
+                {{friend.city}}, {{friend.state}} {{friend.zip}}
+              </p>
+              <p> Notes:
+                <ul class="notesList">
+                  <li ng-repeat="note in friend.notes" class="note">
+                    {{note.body}} - {{note.date}}
+                  </li>
+                </ul>
+              </p>
             </div>
           </li>
         </ul>

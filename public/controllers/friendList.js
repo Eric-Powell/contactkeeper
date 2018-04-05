@@ -10,7 +10,7 @@ app.controller('FriendList', function ($scope) {
     city: 'Kansas City',
     state: 'MO',
     zip: '88809',
-    comments: [{date: '3/25/18', body: 'met John at the gym'}],
+    notes: [{date: '3/25/18', body: 'met John at the gym'}],
     friends: ['Kim Smith', 'Katie Bell']
   },
 
@@ -23,7 +23,7 @@ app.controller('FriendList', function ($scope) {
     city: 'Arlington',
     state: 'VA',
     zip: '22209',
-    comments: [{date: '2/5/18', body: 'met George in HS'}],
+    notes: [{date: '2/5/18', body: 'met George in HS'}],
     friends: ['Jake Power', 'Chris Bettis']
   },
 
@@ -36,16 +36,11 @@ app.controller('FriendList', function ($scope) {
     city: 'New York',
     state: 'NY',
     zip: '10008',
-    comments: [{date: '1/25/18', body: 'met Stacy at HH'}],
+    notes: [{date: '1/25/18', body: 'met Stacy at HH'}, {date: '2/2/18', body: 'hungout in NYC'}],
     friends: ['Kim Taylor']
   }];
 
-  // $scope.showMe = false;
-
-  // $scope.friendDetails = function(friend, $index) {
-  //   $scope.showMe = !$scope.showMe;
-  //   console.log($index, friend);
-  // };
+  this.orderProp = 'firstName';
   
 })
 

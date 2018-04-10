@@ -1,0 +1,67 @@
+<!-- bootstrap setup -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <form class="form">        
+        <input type="text" name="firstName" placeholder="First Name">
+        <input type="text" name="lastName" placeholder="Last Name"> <br>
+        <input type="text" name="number" placeholder="Phone Number"> <br>
+        <input type="text" name="email" placeholder="Email"> <br>
+        <input type="text" name="address1" placeholder="Street Address">
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="state" placeholder="State">
+        <input type="text" name="zip" placeholder="Zip Code"> <br>
+        <input type="text" name="number" placeholder="Phone Number"> <br>
+        <input type="text" name="notes" placeholder="Note & Date"> <br> <!-- will need to parse note and date into an obj and push into notes array -->
+        <input class="addButton" type="submit" value="Add">
+      </form>
+      
+    </div>
+
+    <div class="col-md-6">
+      <div class="contacts-container">
+        <h2 class="contacts">Contacts</h2>
+
+        <div class="search">
+          <input type="text" name="search" placeholder="Search" ng-model="$ctrl.query">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </div>
+
+        <div class="sortBy">
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="firstName">First Name</option>
+          <option value="lastName">Last Name</option>
+        </select>
+      </div>
+
+        <ul class="friendList">
+          <li ng-repeat="friend in $ctrl.friends | filter: $ctrl.query | orderBy: $ctrl.orderProp track by $index" class="friend">
+            <h4 ng-click="showDetails = !showDetails">{{friend.firstName + ' ' + friend.lastName}}</h4>
+            <div class="friend-details" ng-class="{'hidden': !showDetails}">
+              <p>{{friend.number}}</p>
+              <p>{{friend.email}}</p>
+              <p>{{friend.address1}} <br>
+                {{friend.city}}, {{friend.state}} {{friend.zip}}
+              </p>
+              <p> Notes:
+                <ul class="notesList">
+                  <li ng-repeat="note in friend.notes" class="note">
+                    {{note.body}} - {{note.date}}
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+

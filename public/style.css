@@ -1,0 +1,58 @@
+.title {
+  font-size: 300%;
+  font-weight: bold;
+  color: navy;
+  padding-left: 1%;
+}
+
+.form {
+  margin-top: 10px;
+}
+
+.form .addButton {
+  margin-top: 5px;
+}
+
+.contacts-container {
+  border: solid blue 4px;
+  border-radius: 10px;
+}
+
+.contacts {
+  padding-left: 20px;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.search {
+  padding-left: 20px;
+}
+
+.sortBy {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+ul.friendList {
+  padding: 1%;
+  margin: 0;
+}
+
+li.friend {
+  list-style: none;
+  border: solid 2px;
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+	margin-bottom: 10px;
+  /*margin-left: 1%;*/
+}
+
+.friend-details {
+  max-height: 100%;
+  /*transition: 1s;*/
+  overflow: hidden;
+}
+
+.friend-details.hidden {
+  max-height: 0;
+}

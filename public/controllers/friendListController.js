@@ -1,6 +1,6 @@
 // let app = angular.module('contactApp', []);
 
-app.controller('FriendList', function ($scope) {
+app.controller('FriendListCtrl', ['$scope', function ($scope) {
   this.friends = [{
     firstName: 'John',
     lastName: 'Johnson',
@@ -41,11 +41,11 @@ app.controller('FriendList', function ($scope) {
   }];
 
   this.orderProp = 'firstName';
-  
-})
+}])
+
 
 
 app.component('friends', {
 	templateUrl: '../templates/friendList.html',
-  controller: 'FriendList'
+  controller: 'FriendListCtrl'
 });

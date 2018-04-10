@@ -5,6 +5,14 @@
   padding-left: 1%;
 }
 
+.form {
+  margin-top: 10px;
+}
+
+.form .addButton {
+  margin-top: 5px;
+}
+
 .contacts-container {
   border: solid blue 4px;
   border-radius: 10px;

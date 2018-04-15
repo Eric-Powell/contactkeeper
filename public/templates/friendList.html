@@ -20,7 +20,8 @@
       <div class="friend-details" ng-class="{'hidden': !showDetails}">
         <p>{{friend.number}}</p>
         <p>{{friend.email}}</p>
-        <p>{{friend.address1}} <br>
+        <p>{{friend.address1}} <br> 
+          <span ng-if="friend.address2">{{friend.address2}} <br></span>
           {{friend.city}}, {{friend.state}} {{friend.zip}}
         </p>
         <p> Notes:

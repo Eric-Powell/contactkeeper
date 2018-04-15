@@ -1,4 +1,4 @@
- const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
@@ -13,7 +13,7 @@ const personSchema = new Schema({
   state: {type: String, min: 2, max: 2, uppercase: true, trim: true},
   zip: {type: String, min: 5, max: 5, lowercase: true, trim: true},
   notes: [{date: Date, body: String}],
-  friends: Array
+  // friends: Array
 });
 
 module.exports = mongoose.model('Friend', personSchema);

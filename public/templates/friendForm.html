@@ -1,0 +1,15 @@
+<div class="form-container">
+  <form class="form" ng-submit="$ctrl.addFriendInfo()">        
+    <input type="text" name="firstName" placeholder="First Name" ng-model="$ctrl.friend.firstName">
+    <input type="text" name="lastName" placeholder="Last Name" ng-model="$ctrl.friend.lastName"> <br>
+    <input type="text" name="number" placeholder="Phone Number" ng-model="$ctrl.friend.number"> <br>
+    <input type="text" name="email" placeholder="Email" ng-model="$ctrl.friend.email"> <br>
+    <input type="text" name="address1" placeholder="Street Address" ng-model="$ctrl.friend.address1"> 
+    <input type="text" name="address2" placeholder="Apartment #" ng-model="$ctrl.friend.address2"> <br>
+    <input type="text" name="city" placeholder="City" ng-model="$ctrl.friend.city">
+    <input type="text" name="state" placeholder="State" ng-model="$ctrl.friend.state">
+    <input type="text" name="zip" placeholder="Zip Code" ng-model="$ctrl.friend.zip"> <br>
+    <input type="text" name="notes" placeholder="Notes" ng-model="$ctrl.friend.notes"> <br> <!-- will need to parse note and date into an obj and push into notes array -->
+    <input class="addButton" type="submit" value="Add">
+  </form>	
+</div>

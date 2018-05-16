@@ -19,12 +19,11 @@
       <h4 ng-click="showDetails = !showDetails">{{friend.firstName + ' ' + friend.lastName}}</h4>
       <div class="friend-details" ng-class="{'hidden': !showDetails}">
         <p>{{friend.number}}</p>
-        <p>{{friend.email}}</p>
-        <p>{{friend.address1}} <br> 
-          <span ng-if="friend.address2">{{friend.address2}} <br></span>
-          {{friend.city}}, {{friend.state}} {{friend.zip}}
-        </p>
-        <p> Notes:
+        <p ng-if="friend.email">{{friend.email}}</p>
+        <p ng-if="friend.address1">{{friend.address1}} <!-- <br> --> 
+        <p ng-if="friend.address2">{{friend.address2}}</p>
+        <p ng-if="friend.zip">{{friend.city}}, {{friend.state}} {{friend.zip}}</p>
+        <p ng-if="friend.notes.length"> Notes:
           <ul class="notesList">
             <li ng-repeat="note in friend.notes" class="note">
               {{note.body}} - {{note.date}}

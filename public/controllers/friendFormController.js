@@ -1,8 +1,12 @@
 app.controller('FriendFormCtrl', ['$scope', 'FriendFactory', function ($scope, FriendFactory) {
-	this.addFriendInfo = () => FriendFactory.addFriend(this.friend);
+	this.addFriendInfo = () => {
+    FriendFactory.addFriend(this.friend);
+    // $state.reload();
+  }
 }]);
 
 app.component('friendForm', {
   templateUrl: '../templates/friendForm.html',
-  controller: 'FriendFormCtrl'
+  controller: 'FriendFormCtrl', 
+  bindings: {friends: '<'}
 });

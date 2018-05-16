@@ -5,7 +5,7 @@ app.controller('FriendListCtrl', ['$scope', 'FriendFactory', function($scope, Fr
   // console.log(FriendFactory.getFriends())
   FriendFactory.getFriends().then((person) => {
     this.friends = person;
-    console.log(this.friends)
+    // console.log(this.friends)
   }).catch((err) => console.error('There was an error in the FriendListCtrl getting your friend list: ', err));
 
   // this.friends = [{
